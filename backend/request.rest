@@ -1,0 +1,35 @@
+GET http://localhost:5000/stories
+
+###
+GET http://localhost:5000/stories/1
+
+###
+POST http://localhost:5000/stories
+Content-Type: application/json
+
+{
+    "title": "The Moon that Can't be Seen",
+    "author": "Rara",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec justo accumsan, commodo dolor faucibus, dictum nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris consequat lectus eget ex bibendum, quis aliquam leo facilisis. In lobortis libero et odio laoreet rhoncus.",
+    "category": "Teen Fiction",
+    "story_cover": "",
+    "keyword": ["school", "fiction"],
+    "status": "Draft"
+}
+
+###
+PATCH http://localhost:5000/stories/1
+Content-Type: application/json
+
+{
+    "title": "Given",
+    "author": "Sansa S.",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec justo accumsan, commodo dolor faucibus, dictum nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris consequat lectus eget ex bibendum, quis aliquam leo facilisis. In lobortis libero et odio laoreet rhoncus.",
+    "category": "Romance",
+    "story_cover": "",
+    "keyword": ["music"],
+    "status": "Publish"
+}
+
+###
+DELETE http://localhost:5000/stories/2
